@@ -1,5 +1,6 @@
 const figlet = require('figlet');
 const inquirer = require('inquirer');
+const addEmployee = require('./lib/Employee');
 
 const init = () => {
 console.log(
@@ -28,20 +29,20 @@ whitespaceBreak: true
         name: "MENU",
         message: "What would you like to do?",
         choices: ["View All Employees", "Add Employee", "Update Employee Role", "View All Roles", "Add Role",  "View All Departments", "Add Department", "Quit"],
-        filter: function(val) {
-          return val.split(".")[1];
-        }
       }
     ];
     return inquirer.prompt(questions);
   };
   
-  // ...
-  
   const run = async () => {
     init();
     const answers = await askQuestions();
     const { MENU } = answers;
+    if (MENU === "Add Employee") {
+      addEmployee()
+    }
   };
 
   run();
+
+  module.exports = askQuestions;
