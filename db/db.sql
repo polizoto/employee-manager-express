@@ -1,3 +1,9 @@
-DROP DATABASE IF EXISTS organization;
-CREATE DATABASE organization;
-USE organization;
+ IF NOT EXISTS(SELECT * FROM sys.databases WHERE name = 'organization')
+  BEGIN
+    CREATE DATABASE [organization]
+
+
+    END
+    GO
+       USE [organization]
+    GO
