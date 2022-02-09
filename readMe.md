@@ -38,3 +38,5 @@ A node CLI application for managing the employees in your organization using a M
 ![screenshot of Employee-Manager-Express](/screenshot.png)
 
 ## Video Demonstration
+
+<a href="https://www.dropbox.com/s/pqkkrct2wip16op/Employeemanagerexpress_captioned.mp4?dl=0" target="_blank">Video Demonstration of Installation and Usage</a>
